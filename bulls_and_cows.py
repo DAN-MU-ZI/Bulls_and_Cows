@@ -14,7 +14,6 @@ def play_game():
     # 숫자를 뽑습니다.
     computer_num = num_generator()
 
-
     # 게임을 시작합니다.
     print("Let's play Bulls and Cows!")
 
