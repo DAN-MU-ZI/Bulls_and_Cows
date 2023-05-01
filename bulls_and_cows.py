@@ -23,6 +23,14 @@ def num_generator():
             rand_num.append(digit)
     return rand_num
 
+def print_output(bulls, cows, cnt):
+    
+    if bulls == 4:
+        print(f"You win in {cnt} guesses!")
+
+    else:
+        print(f"{bulls} bull(s), {cows} cow(s)")
+        ## 재훈님 count 함수 호출 
 def validate_input(user_input):
         if not user_input.isdigit() or len(user_input) != 4:
             print("유효하지 않은 입력입니다. 숫자 4개를 입력하세요.")
@@ -40,10 +48,6 @@ def get_user_input():
 
     number = int(user_input)
     return number 
-
-
-
-
 
 # 게임을 실행하는 함수
 def play_game():
@@ -63,5 +67,6 @@ def play_game():
     bulls, cows = compare_two_number(user_num, computer_num)
   
     # 결과를 출력합니다.
+    print_output(bulls, cows)
 
 play_game()
