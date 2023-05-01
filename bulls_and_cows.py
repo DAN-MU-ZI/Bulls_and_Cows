@@ -1,13 +1,13 @@
 #import
 
 def validate_input(user_input):
-        if not user_input.isdigit() or len(user_input) != 4:
-            print("유효하지 않은 입력입니다. 숫자 4개를 입력하세요.")
-            return False
-        elif len(set(user_input)) != 4:
-            print("중복된 숫자가 있습니다. 다시 입력해주세요.")
-            return False
-        return True
+    if not user_input.isdigit() or len(user_input) != 4:
+        print("유효하지 않은 입력입니다. 숫자 4개를 입력하세요.")
+        return False
+    elif len(set(user_input)) != 4:
+        print("중복된 숫자가 있습니다. 다시 입력해주세요.")
+        return False
+    return True
 
 
 def get_user_input():
@@ -30,10 +30,7 @@ def play_game():
     print("Let's play Bulls and Cows!")
 
     # 사용자로부터 입력을 받습니다.
-    
-    number = get_user_input()
-
-    # 입력이 유효한지 확인합니다.
+    user_num = get_user_input()
 
     # 숫자를 비교합니다.
 
