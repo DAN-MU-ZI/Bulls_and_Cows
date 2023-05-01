@@ -16,10 +16,8 @@ def get_user_input():
         user_input = input("중복되지 않는 숫자 4개를 입력해주세요:  ")
 
     number = int(user_input)
-    digits = list(str(number))
-    integer_array = [int(digit) for digit in digits]
+    return number 
 
-    return integer_array
 
 
 
@@ -33,7 +31,7 @@ def play_game():
 
     # 사용자로부터 입력을 받습니다.
     
-    integer_array = get_user_input()
+    number = get_user_input()
 
     # 입력이 유효한지 확인합니다.
 
