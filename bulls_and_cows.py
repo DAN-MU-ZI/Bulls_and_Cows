@@ -9,6 +9,20 @@ def num_generator():
             rand_num.append(digit)
     return rand_num
 
+def count_life(cur_life, bulls, cows, highest_bulls, highest_cows):
+    """
+    제출한 답에서 기록 갱신을 하지 못했다면 목숨 감소
+    ---------------------------------------------
+    사용예시
+    highest_bulls, highest_cows, cur_life = count_life(cur_life, answer, guess)
+    """
+    if (highest_bulls > bulls) and (highest_cows == cows) or (highest_bulls == bulls) and (highest_cows > cows):
+        highest_bulls = max(highest_bulls, bulls)
+        highest_cows = max(highest_cows, cows)
+        return highest_bulls, highest_cows, cur_life
+    else:
+        return highest_bulls, highest_cows, cur_life-1
+
 # 게임을 실행하는 함수
 def play_game():
     # 숫자를 뽑습니다.
