@@ -27,7 +27,8 @@ def count_life(cur_life, bulls, cows, highest_bulls, highest_cows):
 def play_game():
     # 숫자를 뽑습니다.
     computer_num = num_generator()
-
+    highest_bulls = 0
+    highest_cows = 0
     # 게임을 시작합니다.
     print("Let's play Bulls and Cows!")
 
